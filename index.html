@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Square And Implant Center</title>
+    <!-- Link to Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://github.com/aniketsng/dental-clinic-app/blob/6e8abb6acaacdfa6cc9b3f2f9ff3b457de0dfc8f/app.css"> <!-- Link to external CSS -->
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-left">Dental Square And Implant Center</div>
+        <button class="theme-btn" onclick="toggleTheme()">
+            <i class="fas fa-moon"></i>
+        </button>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+<section id="home-section">
+    <div class="hero">
+        <h1>Welcome to Dental Square & Implant Center</h1>
+        <p>Your trusted partner for beautiful, healthy smiles.</p>
+        <button onclick="showSection('appointment-section')">Book an Appointment</button>
+    </div>
+
+    <div class="intro">
+        <p>At Dental Square & Implant Center, we combine advanced dental care with personalized service to give you a beautiful, confident smile. Our expert team is here for all your dental needs.</p>
+    </div>
+
+    <div class="services-overview">
+        <div class="service-item">
+            <img src="https://i.pinimg.com/564x/a6/40/24/a640244a0eae58f59b30cab2cfca4cb7.jpg" alt="General Dentistry">
+            <h3>General Dentistry</h3>
+        </div>
+        <div class="service-item">
+            <img src="https://i.pinimg.com/236x/e9/33/90/e93390456a33d78b58acc7745aa2e647.jpg" alt="Dental Implants">
+            <h3>Dental Implants</h3>
+        </div>
+        <div class="service-item">
+            <img src="https://i.pinimg.com/236x/bc/db/5f/bcdb5f86ed49a3d82c9343426b3a8231.jpg" alt="Cosmetic Dentistry">
+            <h3>Cosmetic Dentistry</h3>
+        </div>
+    </div>
+
+    <div class="benefits">
+        <ul>
+            <li>Experienced and Friendly Dentists</li>
+            <li>State-of-the-Art Technology</li>
+            <li>Personalized Dental Care</li>
+        </ul>
+    </div>
+
+    <div class="testimonials">
+        <blockquote>"The best dental experience I've ever had! Highly recommended." – John D.</blockquote>
+    </div>
+</section>
+
+
+        <!-- Updates Section -->
+<section id="updates-section" class="updates">
+    <h2>Updates</h2>
+
+    <!-- Update 1: New Dental Technology -->
+    <div class="update-item">
+        <img src="https://www.australiadental.com.au/wp-content/uploads/aesthetic-dentistry-in-turkey.jpg" alt="New Dental Technology" class="update-image">
+        <p>We are excited to announce the addition of the latest dental technology in our clinic. Our new digital X-ray machine provides higher quality images with less radiation exposure. This means safer and more accurate diagnostics for our patients.</p>
+    </div>
+
+    <!-- Update 2: Dental Health Awareness Camp -->
+    <div class="update-item">
+        <img src="https://i.pinimg.com/564x/35/18/97/351897c145b6cabfd7c3b2ce407f681d.jpg" alt="Dental Health Awareness Camp" class="update-image">
+        <p>We recently organized a Dental Health Awareness Camp in our community. The camp included free dental check-ups, consultations, and informative sessions on oral hygiene practices. Thank you to everyone who participated!</p>
+    </div>
+
+    <!-- Update 3: Patient Testimonial -->
+    <div class="update-item">
+        <img src="https://i.pinimg.com/564x/81/e9/a9/81e9a91089e6df64f6ae485481eee544.jpg" alt="Patient Testimonial" class="update-image">
+        <p>Hear from our happy patients! Jane Doe shares her experience of a successful dental implant procedure at our clinic. "The staff was incredibly professional and caring. My procedure was smooth, and I am thrilled with the results!"</p>
+    </div>
+
+    <!-- Update 4: New Team Member -->
+    <div class="update-item">
+        <img src="https://i.pinimg.com/564x/3e/c9/77/3ec977f48036d4d7153fbbf6d0c48319.jpg" alt="New Team Member" class="update-image">
+        <p>We are pleased to welcome Dr. John Smith to our team! Dr. Smith specializes in pediatric dentistry and brings over 10 years of experience. He is passionate about providing a comfortable and friendly environment for our young patients.</p>
+    </div>
+
+    <!-- Update 5: Special Offers -->
+    <div class="update-item">
+        <img src="https://i.pinimg.com/564x/6a/fc/f2/6afcf2f9e30c8e8e19b84f054721ddf6.jpg" alt="Special Offers" class="update-image">
+        <p>Special Offers: Get a 20% discount on teeth whitening services this month! Schedule an appointment now to brighten your smile.</p>
+    </div>
+</section>
+
+        <!-- Contact Section -->
+        <div class="contact" id="contact-section" style="display: none;">
+            <section id="contact">
+                <h2>Contact Us</h2>
+                <p>Location: Dental Square and Implant Center, SCO 55, Mini Sctriate Patiala 147001.</p>
+                <p>Email: <a href="mailto:ankurvermasquare@gmail.com">ankurvermasquare@gmail.com</a></p>
+                <p>Phone: +91 9872453153, +91 9780023107</p>
+            </section>
+        </div>
+
+        <!-- Appointment Section -->
+        <div class="appointment" id="appointment-section" style="display: none;">
+            <section id="appointment">
+                <h2>Book an Appointment</h2>
+                <form id="appointment-form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact">Contact Number:</label>
+                        <input type="tel" id="contact" name="contact" placeholder="Enter your contact number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <!-- Grouping Date and Time in one row -->
+                    <div class="form-group inline-fields">
+                        <div>
+                            <label for="date">Preferred Date:</label>
+                            <select id="date" name="date" required>
+                                <!-- Options will be dynamically populated by JavaScript -->
+                            </select>
+                        </div>
+                        <div>
+                            <label for="time">Preferred Time:</label>
+                            <select id="time" name="time" required>
+                                <!-- Time options will be dynamically populated by JavaScript -->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Additional information..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit</button>
+                    
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer with Navigation -->
+    <footer>
+        <button onclick="showSection('home-section')">Home</button>
+        <button onclick="showSection('appointment-section')">Appointment</button>
+        <button onclick="showSection('updates-section')">Updates</button>
+        <button onclick="showSection('contact-section')">Contact</button>
+    </footer>
+
+    <!-- External JavaScript File -->
+    <script src="https://github.com/aniketsng/dental-clinic-app/blob/6e8abb6acaacdfa6cc9b3f2f9ff3b457de0dfc8f/app.js"></script> <!-- Link to external JavaScript -->
+</body>
+</html>
