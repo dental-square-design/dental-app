@@ -1,0 +1,430 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    overflow-x: hidden;
+    transition: background-color 0.3s, color 0.3s;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background-color: #1c1c1e;
+    color: #e4e4e7;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #007BFF;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 60px;
+    transition: background-color 0.3s;
+}
+
+body.dark-theme header {
+    background-color: #333;
+}
+
+.header-left {
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    animation: glow 1.5s infinite alternate;
+    transition: transform 0.3s ease;
+}
+
+.theme-btn {
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    transition: color 0.3s, transform 0.2s;
+}
+
+body.dark-theme .theme-btn {
+    color: #e4e4e7;
+}
+
+.theme-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Main Content Styling */
+main {
+    flex-grow: 1;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 1.8;
+    margin-top: 20px;
+}
+
+/* Section Styling */
+.home, .services, .updates, .contact, .appointment {
+    margin-top: 20px;
+    display: none;
+}
+
+#home-section, #updates-section, #contact-section, #appointment-section {
+    display: none; /* Initially hidden */
+}
+
+/* Home Section */
+#home-section {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero {
+    background: linear-gradient(to right, #007BFF, #00A8E8); /* Gradient background */
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.cta-btn {
+    background-color: #FFD700;
+    color: #333;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-btn:hover {
+    background-color: #FFC107;
+    transform: translateY(-3px);
+}
+
+.intro {
+    margin-top: 40px;
+    font-size: 18px;
+    color: #555;
+}
+
+.services-overview {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.service-item {
+    width: 30%;
+}
+
+.service-item img {
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+.service-item h3 {
+    font-size: 20px;
+    color: #007BFF;
+}
+
+.benefits {
+    margin-top: 60px;
+}
+
+.benefits ul {
+    list-style: none;
+    font-size: 18px;
+}
+
+.benefits ul li {
+    margin-bottom: 10px;
+}
+
+.testimonials {
+    margin-top: 60px;
+    font-style: italic;
+    color: #666;
+    font-size: 18px;
+}
+
+blockquote {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+body #home-section {
+    display: block; /* Show home section by default */
+}
+
+/* Updates Section Styling */
+#updates-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f8f9fa; /* Light background to differentiate from other sections */
+    color: #333;
+    margin-top: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-theme #updates-section {
+    background-color: #2c2c2e; /* Dark background for dark mode */
+    color: #e4e4e7;
+}
+
+#updates-section h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Individual Update Items */
+.update-item {
+    display: flex; /* Flexbox for image and text alignment */
+    align-items: center;
+    margin-bottom: 40px; /* Space between updates */
+    background-color: #ffffff; /* Background for each update item */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+body.dark-theme .update-item {
+    background-color: #333; /* Dark background for update items */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Darker shadow for dark mode */
+}
+
+.update-item:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.update-image {
+    width: 150px; /* Fixed width for images */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between image and text */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for images */
+    transition: transform 0.3s;
+}
+
+body.dark-theme .update-image {
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1); /* Subtle white shadow in dark mode */
+}
+
+.update-image:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.update-item p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: left; /* Align text to the left for better readability */
+    flex-grow: 1; /* Allow text to take the remaining space */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .update-item {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        text-align: center; /* Center text for smaller screens */
+    }
+
+    .update-image {
+        margin-bottom: 15px; /* Space below image when stacked */
+        margin-right: 0; /* Remove right margin */
+        width: 100%; /* Full width image for smaller screens */
+        max-width: 300px; /* Limit maximum width for images */
+    }
+}
+
+/* Footer Styling */
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 15px 0;
+    border-top: 1px solid #ddd;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: background-color 0.3s;
+    height: 70px;
+}
+
+body.dark-theme footer {
+    background-color: #2c2c2e;
+    border-top: 1px solid #444;
+}
+
+footer button {
+    background-color: #008080;
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    flex: 1;
+    margin: 0 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-theme footer button {
+    background-color: #004c4c;
+    color: #FFD700;
+    border: 1px solid #555;
+}
+
+footer button:hover {
+    background-color: #006666;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-theme footer button:hover {
+    background-color: #005555;
+    color: #ffffff;
+    box-shadow: 0 8px 12px rgba(255, 215, 0, 0.15);
+}
+
+/* Form Styles */
+#appointment-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+/* Dark Mode Adjustments for Form */
+body.dark-theme #appointment-form {
+    background-color: #333;
+    border: 1px solid #444;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Individual Form Elements */
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#appointment-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+body.dark-theme #appointment-form label {
+    color: #FFD700;
+}
+
+#appointment-form input,
+#appointment-form textarea {
+    width: calc(100% - 16px);
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #ffffff;
+    color: #333;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Inline Fields Styling */
+.inline-fields {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+body.dark-theme #appointment-form input,
+body.dark-theme #appointment-form textarea {
+    background-color: #222;
+    color: #e4e4e7;
+    border: 1px solid #444;
+}
+
+#appointment-form input[type="submit"] {
+    background-color: #008080;
+    color: white;
+    border: none;
+    padding: 14px 20px;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 15px;
+}
+
+body.dark-theme #appointment-form input[type="submit"] {
+    background-color: #004c4c;
+    color: #FFD700;
+}
+
+#appointment-form input[type="submit"]:hover {
+    background-color: #006666;
+    transform: translateY(-2px);
+}
+
+body.dark-theme #appointment-form input[type="submit"]:hover {
+    background-color: #005555;
+    color: #ffffff;
+}
+
+/* Add hover effect to form fields */
+#appointment-form input:focus,
+#appointment-form textarea:focus {
+    border-color: #007BFF;
+    outline: none;
+}
+
+body.dark-theme #appointment-form input:focus,
+body.dark-theme #appointment-form textarea:focus {
+    border-color: #FFD700;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
